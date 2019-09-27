@@ -16,4 +16,22 @@
 
 #github th, #github td {
     border: solid 2px black;
+    font-size: 2.0em;
 }
+
+@media (max-width: 1300px) {
+
+    #github th, #github td {
+        font-size: 1.5em;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    #github th, #github td {
+        font-size: 1.0em;
+    }
+
+}
+
