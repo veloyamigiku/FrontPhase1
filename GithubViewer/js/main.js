@@ -1,5 +1,5 @@
 
-function searchRepository(forks_count) {
+function searchRepository(name) {
     // 通信オブジェクトを作成する。
     var xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", function() {
@@ -16,7 +16,7 @@ function searchRepository(forks_count) {
             console.log("通信中");
         }
     })
-    var url = `https://api.github.com/search/repositories?q=forks:>=${forks_count}&sort=stars&order=desc`;
+    var url = `https://api.github.com/search/repositories?q=${name} in:name&sort=stars&order=desc`;
     // 通信前の設定を実施する。
     // 第1引数は、HTTPメソッドを指定する。
     // 第2引数は、接続先URLを指定する。
@@ -75,11 +75,11 @@ function updateTable(repository) {
 
 window.addEventListener("load", function() {
 
-    var reqButton = document.getElementById("req");
+    var searchButton = document.getElementById("search");
     
-    reqButton.addEventListener("click", function() {
-        var forks_count = parseInt(document.getElementById("forks_count").value);
-        searchRepository(forks_count);
+    searchButton.addEventListener("click", function() {
+        var name = document.getElementById("name").value;
+        searchRepository(name);
     });
 
 });
