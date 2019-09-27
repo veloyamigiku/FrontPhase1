@@ -3,13 +3,17 @@ function searchRepository(forks_count) {
     // 通信オブジェクトを作成する。
     var xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // 通信完了および、レスポンスコードが200(成功)の場合に、リクエスト結果を参照する。
-            var repository = JSON.parse(xhr.responseText);
-            updateTable(repository);
-            console.log(repository);
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                // 通信完了および、レスポンスコードが200(成功)の場合に、リクエスト結果を参照する。
+                var repository = JSON.parse(xhr.responseText);
+                updateTable(repository);
+                console.log(repository);
+            } else {
+                console.log("status:" + xhr.status);
+            }
         } else {
-            console.log("通信時にエラー発生");
+            console.log("通信中");
         }
     })
     var url = `https://api.github.com/search/repositories?q=forks:>=${forks_count}&sort=stars&order=desc`;
