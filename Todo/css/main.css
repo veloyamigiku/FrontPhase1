@@ -1,0 +1,40 @@
+/* 入力領域のスタイル */
+#wrap_input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#todoContent {
+    font-size: 1.5em;
+    width: 1000px;
+}
+
+/* Todo一覧のスタイル */
+.todo {
+    margin: 10px;
+}
+
+.todo .content {
+    display: inline-block;
+    width: 1000px;
+    font-size: 1.5em;
+}
+
+#todoAddBtn,
+.todoEditBtn,
+.todoDeleteBtn {
+    display: inline-block;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #15179c;
+    color: #a095be;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#todoAddBtn:hover,
+.todoEditBtn:hover,
+.todoDeleteBtn:hover {
+    background-color: #7679f8
+}
