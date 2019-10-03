@@ -1,40 +1,82 @@
 /* 入力領域のスタイル */
 #wrap_input {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* 入力領域の上下の余白 */
+    margin: 20px 0px;
 }
 
+/* Todo入力要素のスタイル */
 #todoContent {
-    font-size: 1.5em;
-    width: 1000px;
-}
-
-/* Todo一覧のスタイル */
-.todo {
-    margin: 10px;
-}
-
-.todo .content {
     display: inline-block;
-    width: 1000px;
+    /* 余白 */
+    margin: 0px 5px;
+    padding: 5px;
     font-size: 1.5em;
+    width: 600px;
 }
 
-#todoAddBtn,
-.todoEditBtn,
-.todoDeleteBtn {
+/* Todo追加ボタンのスタイル */
+#todoAddBtn {
     display: inline-block;
     width: 100px;
     border-radius: 5px;
+    /* 色 */
     background-color: #15179c;
     color: #a095be;
-    font-size: 15px;
-    margin: 0px 10px;
+    font-size: 1.5em;
+    /* テキストの配置 */
+    text-align: center;
+    /* 余白 */
+    margin: 0px 5px;
     padding: 10px;
+    /* 配置 */
+    vertical-align: middle;
+}
+
+/* Todo追加ボタン（hover）のスタイル */
+#todoAddBtn:hover {
+    /* 色 */
+    background-color: #7679f8
+}
+
+/* Todoのスタイル */
+.todo {
+    /* 余白 */
+    margin: 5px;
+}
+
+/* Todoテキストのスタイル */
+.content {
+    display: inline-block;
+    /* テキストのサイズ */
+    font-size: 1.5em;
+}
+
+/* Todo編集・削除ボタンのスタイル */
+.todoEditBtn,
+.todoDeleteBtn {
+    display: inline-block;
+    /* 幅 */
+    width: 100px;
+    border-radius: 5px;
+    /* 色 */
+    background-color: #15179c;
+    color: #a095be;
+    /* ボタンテキストのサイズ */
+    font-size: 1.5em;
+    /* ボタンテキストの配置 */
     text-align: center;
 }
 
-#todoAddBtn:hover,
+/* Todo編集・削除ボタンとテキストのスタイル */
+.content,
+.todoEditBtn,
+.todoDeleteBtn {
+    /* 余白 */
+    margin: 0px 5px;
+    padding: 10px;
+}
+
+/* Todo編集・削除ボタン（hover）のスタイル */
 .todoEditBtn:hover,
 .todoDeleteBtn:hover {
     background-color: #7679f8
