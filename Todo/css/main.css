@@ -11,7 +11,7 @@
     margin: 0px 5px;
     padding: 5px;
     font-size: 1.5em;
-    width: 600px;
+    width: 1000px;
 }
 
 /* Todo追加ボタンのスタイル */
@@ -44,16 +44,20 @@
     margin: 5px;
 }
 
-/* Todoテキストのスタイル */
-.content {
+/* Todoテキスト、Todo入力領域のスタイル */
+.content,
+.editContent {
     display: inline-block;
     /* テキストのサイズ */
     font-size: 1.5em;
+    width: 1000px;
 }
 
-/* Todo編集・削除ボタンのスタイル */
+/* Todo編集・削除・編集確定・編集キャンセルボタンのスタイル */
 .todoEditBtn,
-.todoDeleteBtn {
+.todoDeleteBtn,
+.todoEditCancelBtn,
+.todoEditCommitBtn {
     display: inline-block;
     /* 幅 */
     width: 100px;
@@ -65,12 +69,17 @@
     font-size: 1.5em;
     /* ボタンテキストの配置 */
     text-align: center;
+    /* 配置 */
+    vertical-align: middle;
 }
 
-/* Todo編集・削除ボタンとテキストのスタイル */
+/* Todo編集・削除・編集確定・編集キャンセルボタンとテキストのスタイル */
 .content,
+.editContent,
 .todoEditBtn,
-.todoDeleteBtn {
+.todoDeleteBtn,
+.todoEditCancelBtn,
+.todoEditCommitBtn {
     /* 余白 */
     margin: 0px 5px;
     padding: 10px;
@@ -78,6 +87,8 @@
 
 /* Todo編集・削除ボタン（hover）のスタイル */
 .todoEditBtn:hover,
-.todoDeleteBtn:hover {
+.todoDeleteBtn:hover,
+.todoEditCancelBtn:hover,
+.todoEditCommitBtn:hover {
     background-color: #7679f8
 }
