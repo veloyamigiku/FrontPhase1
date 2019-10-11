@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Notification</title>
+    </head>
+    <body>
+        <h3>Notification</h3>
+        <script>
+        (function() {
+            if ("Notification" in window) {
+                var permission = Notification.permission;
+                
+                if (permission == "denied") {
+                       return;
+                }
+                
+                setTimeout(() => {
+                    Notification
+                        .requestPermission()
+                        .then(function() {
+                            var notification = new Notification("sample");
+                        });    
+                },
+                5000);
+                
+            }
+        })();
+        </script>
+    </body>
+</html>

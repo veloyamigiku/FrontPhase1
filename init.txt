@@ -1,0 +1,24 @@
+Apache(apache2)_環境構築
+
+[ubuntu]
+
+・インストール
+apt-get update
+apt-get install apache2
+
+・仮想ディレクトリの設定
+修正ファイル：/etc/apache2/mods-enabled/alias.conf
+修正内容：以下の内容を追加する。
+
+Alias /FrontPhase1/ "/var/www/html/FrontPhase1/"
+
+<Directory "/var/www/html/FrontPhase1">
+	Options Indexes FollowSymLinks
+	AllowOverride None
+	Require all granted
+</Directory>
+
+・SSL導入
+a2enmod ssl
+a2ensite default-ssl
+※サンプルのサーバ証明書（署名）・秘密鍵が付属している。

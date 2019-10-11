@@ -1,0 +1,54 @@
+.flexcontainer {
+    display: flex;
+    
+    /* ===== Flexコンテナへの指示 ===== */
+    /* flex-direction（並び方） */
+    flex-direction: row;
+    /*flex-direction: row-reverse;*/
+    /*flex-direction: column;*/
+    /*flex-direction: column-reverse;*/
+    
+    /* flex-wrap（折り返し） */
+    /*flex-wrap: wrap;*/
+
+    /* justify-content（水平方向の配置） */
+    /*justify-content: flex-end;*/
+    justify-content: center;
+
+    /* align-items（子要素同士_垂直方向の配置） */
+    /* align-content（子要素全体_垂直方向の配置） */
+
+    /* ===== Flexアイテムへの指示 ===== */
+    
+}
+
+.flexitem {
+    width: 10%;
+    height: 100px;
+    text-align: center;
+}
+
+.item1 {
+    background-color: #009933;
+    order: 4;
+}
+
+.item2 {
+    background-color: #0066FF;
+    order: 3;
+}
+
+.item3 {
+    background-color: #CC6666;
+    order: 5;
+}
+
+.item4 {
+    background-color: #CC66FF;
+    order: 1;
+}
+
+.item5 {
+    background-color: #FF33CC;
+    order: 2;
+}
