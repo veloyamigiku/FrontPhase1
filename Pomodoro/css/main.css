@@ -1,0 +1,64 @@
+/* タイマー（時間領域、ボタン領域）のスタイル。 */
+#timer-mm-ss,
+#timer-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* レイアウト（Flex）を適用する親要素のスタイル。 */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#timer-mm-input,
+#timer-ss-input {
+    width: 60px;
+    font-size: 3.5em;
+}
+
+#timer-sep {
+    width: 20px;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+/*
+タイマー（分、区切り、秒）、
+タイマー（分、秒）の入力領域
+のスタイル。
+*/
+#timer-mm,
+#timer-ss {
+    width: 10%;
+    font-size: 3.5em;
+}
+
+/* タイマー（分・秒）のスタイル。 */
+#timer-mm,
+#timer-ss {
+    display: none;
+}
+
+/* タイマー開始・停止ボタンのスタイル。 */
+#timer-start,
+#timer-stop {
+    width: 10%;
+    background-color: blue;
+    color: antiquewhite;
+    font-size: 1.5em;
+    padding: 5px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+/* タイマー開始・停止ボタンのスタイル（hover） */
+#timer-start:hover,
+#timer-stop:hover {
+    opacity: 0.5;
+}
