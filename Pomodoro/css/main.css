@@ -1,4 +1,4 @@
-/* タイマー（時間領域、ボタン領域）のスタイル。 */
+/* タイマー（表示領域、ボタン領域）のスタイル。 */
 #timer-mm-ss,
 #timer-button {
     display: flex;
@@ -7,58 +7,83 @@
     margin: 20px 0;
 }
 
-/* レイアウト（Flex）を適用する親要素のスタイル。 */
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+/* タイマー（分、秒、区切り）のスタイル。 */
+#timer-mm,
+#timer-ss,
+#timer-sep {
+    font-size: 10.0em;
+    text-align: center;
 }
 
+/* タイマーのボタン領域のスタイル。 */
+/* タイマー開始・停止・設定ボタンのスタイル。 */
+#timer-start,
+#timer-stop,
+#timer-clear,
+#timer-setup {
+    background-color: blue;
+    color: antiquewhite;
+    font-size: 5.0em;
+    padding: 20px;
+    margin: 20px 15px;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
+/* タイマーの停止ボタンのスタイル。 */
+#timer-stop {
+    display: none;
+}
+
+/* タイマー開始・停止・設定ボタンのスタイル（hover）。 */
+#timer-start:hover,
+#timer-stop:hover,
+#timer-clear:hover,
+#timer-setup:hover {
+    opacity: 0.5;
+}
+
+/* タイマー（設定領域）のスタイル。 */
+#timer-setting {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+/* タイマー設定項目のスタイル。 */
+.timer-setting-row {
+    display: none;
+    margin: 5px auto;
+}
+
+/* タイマー設定ラベルのスタイル。 */
+#timer-mm-label,
+#timer-ss-label {
+    font-size: 3.5em;
+    vertical-align: middle;
+}
+
+/* タイマー設定入力（分・秒）のスタイル。 */
 #timer-mm-input,
 #timer-ss-input {
     width: 60px;
     font-size: 3.5em;
 }
 
-#timer-sep {
-    width: 20px;
-    font-size: 3.5em;
-    text-align: center;
-}
-
-/*
-タイマー（分、区切り、秒）、
-タイマー（分、秒）の入力領域
-のスタイル。
-*/
-#timer-mm,
-#timer-ss {
-    width: 10%;
-    font-size: 3.5em;
-}
-
-/* タイマー（分・秒）のスタイル。 */
-#timer-mm,
-#timer-ss {
-    display: none;
-}
-
-/* タイマー開始・停止ボタンのスタイル。 */
-#timer-start,
-#timer-stop {
-    width: 10%;
+/* タイマー設定完了ボタンのスタイル。 */
+#timer-setup-done {
     background-color: blue;
     color: antiquewhite;
-    font-size: 1.5em;
-    padding: 5px;
-    margin: 10px 5px;
-    border-radius: 5px;
+    font-size: 3.5em;
+    padding: 15px;
+    margin: 15px 10px;
+    border-radius: 10px;
     border: none;
     text-align: center;
 }
 
-/* タイマー開始・停止ボタンのスタイル（hover） */
-#timer-start:hover,
-#timer-stop:hover {
+/* タイマー設定完了ボタン（hover）のスタイル。 */
+#timer-setup-done:hover {
     opacity: 0.5;
 }

@@ -7,16 +7,32 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
+        <!-- タイマー表示領域 -->
         <div id="timer-mm-ss">
-            <input type="text" id="timer-mm-input" value="60"></input>
             <div id="timer-mm">12</div>
             <div id="timer-sep">:</div>
-            <input type="text" id="timer-ss-input" value="00"></input>
             <div id="timer-ss">34</div>
         </div>
+        <!-- タイマーボタン領域 -->
         <div id="timer-button">
             <div id="timer-start">Start</div>
             <div id="timer-stop">Stop</div>
+            <div id="timer-clear">Clear</div>
+            <div id="timer-setup">Setup</div>
+        </div>
+        <!-- タイマー設定領域 -->
+        <div id="timer-setting">
+            <div class="timer-setting-row">
+                <label id="timer-mm-label">分：</label>
+                <input type="text" id="timer-mm-input" value="60"></input>
+            </div>
+            <div class="timer-setting-row">
+                <label id="timer-mm-label">秒：</label>
+                <input type="text" id="timer-ss-input" value="00"></input>
+            </div>
+            <div class="timer-setting-row">
+                <div id="timer-setup-done">Done</div>
+            </div>
         </div>
         <script src="js/main.js"></script>
     </body>
