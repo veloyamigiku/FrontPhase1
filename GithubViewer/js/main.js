@@ -1,6 +1,23 @@
 import { searchRepository } from "./common.js";
 
 function updateTable(repository) {
+    // 変数の巻上げ（ホイスティング）のサンプル。
+    // 関数スコープ直下の変数巻上げ。
+    var preTable;
+    var items;
+    var wrapTable;
+    var table;
+    var headTr;
+    var headIdTh;
+    var headNameTh;
+    // for文内の変数巻上げ。
+    var i;
+    var item;
+    var id;
+    var idTd;
+    var name;
+    var nameTd;
+    var tr;
 
     // getElementByIdは、要素のIDを元に参照する。
     var preTable = document.getElementById("github");
