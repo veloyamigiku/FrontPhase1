@@ -9,6 +9,11 @@ window.addEventListener("load", function() {
         function() {
             console.log("cap_click_target1");
         },
+        /*
+        本引数が
+        trueの場合は、キャプチャ時のイベント処理とする。
+        falseの場合は、バブリング時のイベント処理とする。
+        */
         true);
     target1.addEventListener(
         "click",
@@ -20,15 +25,15 @@ window.addEventListener("load", function() {
     target2.addEventListener(
         "click",
         function(event) {
-            // stopPropagationは、本関数以外のロジックを実行して、イベント伝播を停止する。
-            // stopImmediatePropagationは、本関数以外のロジックを実行せず、イベント伝播を停止する。
-            event.stopPropagation();
             console.log("cap_click_target2");
         },
         true);
     target2.addEventListener(
         "click",
         function() {
+            // stopPropagationは、本関数以外のロジックを実行して、イベント伝播を停止する。
+            // stopImmediatePropagationは、本関数以外のロジックを実行せず、イベント伝播を停止する。
+            event.stopPropagation();
             console.log("bub_click_target2");
         },
         false);
@@ -46,7 +51,7 @@ window.addEventListener("load", function() {
             console.log("bub_click_target3");
             
             // preventDefaultは、イベント発生元の動作（リンクのクリックによる画面遷移）をキャンセルする。
-            //event.preventDefault();
+            event.preventDefault();
         },
         false);
     
